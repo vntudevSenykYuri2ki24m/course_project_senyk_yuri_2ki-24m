@@ -6,10 +6,7 @@ export const formatPrice = (price: number): string => {
     maximumFractionDigits: 2,
     currencyDisplay: 'symbol'
   })
-      .format(price)
-      .replace('\u00A0', ' ')
-      .replace('₴', '')
-      .trim() + ' ₴';
+      .format(price);
 };
 
 export const formatDate = (date: Date | string): string => {
