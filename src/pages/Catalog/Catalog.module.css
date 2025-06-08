@@ -1,0 +1,139 @@
+.catalog {
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0;
+}
+
+.filterToggle {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #4b5563;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.filterToggle:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 2rem;
+}
+
+.sidebar {
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+}
+
+.main {
+    min-width: 0;
+}
+
+.resultsInfo {
+    margin-bottom: 1rem;
+}
+
+.resultsText {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.overlay {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .filterToggle {
+        display: flex;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 320px;
+        height: 100vh;
+        background-color: white;
+        z-index: 1001;
+        overflow-y: auto;
+    }
+
+    .sidebarOpen {
+        display: block;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+
+    .sidebarOpen ~ .overlay {
+        display: block;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .filterToggle {
+        align-self: flex-end;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}

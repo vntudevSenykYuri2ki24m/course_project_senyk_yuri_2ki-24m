@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/prod/Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+      - REACT_APP_API_URL=https://fakestoreapi.com
+      - REACT_APP_DEVELOPER="Студент 2КІ-24м Сеник Юрій"
+    stdin_open: true
+    tty: true

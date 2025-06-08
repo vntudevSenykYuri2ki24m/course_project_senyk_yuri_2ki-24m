@@ -1,0 +1,243 @@
+.checkout {
+    min-height: 100vh;
+    background-color: #f9fafb;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 2rem 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 2rem;
+}
+
+.formSection {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.summarySection {
+    position: sticky;
+    top: 80px;
+    height: fit-content;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sectionTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+.orderSummary {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.orderTitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0 0 1.5rem 0;
+}
+
+.orderItems {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.orderItem {
+    display: grid;
+    grid-template-columns: 50px 1fr auto;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.orderItem:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.orderItemImage {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background-color: #f9fafb;
+    border-radius: 0.25rem;
+    padding: 0.25rem;
+}
+
+.orderItemDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.orderItemName {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.orderItemInfo {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin: 0;
+}
+
+.orderItemPrice {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #111827;
+    margin: 0;
+}
+
+.orderTotals {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.orderRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: #4b5563;
+}
+
+.orderTotal {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.orderDivider {
+    height: 1px;
+    background-color: #e5e7eb;
+    margin: 0.5rem 0;
+}
+
+.successContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 2rem;
+}
+
+.successContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+}
+
+.successIcon {
+    color: #10b981;
+    margin-bottom: 2rem;
+}
+
+.successTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 1rem 0;
+}
+
+.successMessage {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+.orderNumber {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #111827;
+    background-color: #f3f4f6;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.375rem;
+    margin: 0 0 2rem 0;
+}
+
+@media (max-width: 1024px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .summarySection {
+        position: static;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .formSection {
+        padding: 1.5rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .successTitle {
+        font-size: 1.5rem;
+    }
+
+    .successMessage {
+        font-size: 1rem;
+    }
+}
