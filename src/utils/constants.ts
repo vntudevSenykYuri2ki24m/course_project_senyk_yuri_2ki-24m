@@ -1,12 +1,12 @@
 export const ITEMS_PER_PAGE = 12;
 
 export const SORT_OPTIONS = [
-  { value: "title-asc", label: "Name: A-Z" },
-  { value: "title-desc", label: "Name: Z-A" },
-  { value: "price-asc", label: "Price: Low to High" },
-  { value: "price-desc", label: "Price: High to Low" },
-  { value: "rating-desc", label: "Rating: High to Low" },
-  { value: "rating-asc", label: "Rating: Low to High" },
+  {value: "title-asc", label: "Назва: А-Я"},
+  {value: "title-desc", label: "Назва: Я-А"},
+  {value: "price-asc", label: "Ціна: від низької до високої"},
+  {value: "price-desc", label: "Ціна: від високої до низької"},
+  {value: "rating-desc", label: "Рейтинг: від високого до низького"},
+  {value: "rating-asc", label: "Рейтинг: від низького до високого"},
 ];
 
 export const ROUTES = {
