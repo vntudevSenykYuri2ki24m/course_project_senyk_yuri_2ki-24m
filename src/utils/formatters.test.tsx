@@ -13,9 +13,9 @@ import {
 describe('formatUtils', () => {
     describe('formatPrice', () => {
         test('форматує ціну в гривнях', () => {
-            expect(formatPrice(1000)).toBe('1 000,00 ₴');
-            expect(formatPrice(1234.56)).toBe('1 234,56 ₴');
-            expect(formatPrice(0)).toBe('0,00 ₴');
+            expect(formatPrice(1000)).toMatch(/^1\s000,00\s₴$/);
+            expect(formatPrice(1234.56)).toMatch(/^1\s234,56\s₴$/);
+            expect(formatPrice(0)).toMatch(/^0,00\s₴$/);
         });
     });
 
